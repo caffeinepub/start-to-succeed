@@ -1,0 +1,247 @@
+{
+  "kind": "build_request",
+  "title": "Build Start To Succeed coaching institute marketing website (Home, About, Courses, Contact) with SEO + click-to-call/WhatsApp",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a modern, light-themed, fully responsive (mobile-first) marketing website for the coaching institute “Start To Succeed” using a white background with blue/red accent colors, clean typography, spacious layout, modern cards/icons, soft shadows, and smooth hover animations across interactive elements.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Build a professional, modern, light-themed website for an educational coaching institute named “Start To Succeed.”",
+          "Light theme with white background",
+          "Accent colors: Blue & red (education-friendly, professional)",
+          "Clean typography, spacious layout",
+          "Modern cards, icons, soft shadows",
+          "Fully responsive (mobile-first)",
+          "Smooth hover animations"
+        ]
+      },
+      "acceptanceCriteria": [
+        "All pages/sections render correctly from 320px mobile up through desktop widths without horizontal scrolling.",
+        "Primary and secondary CTAs have visible hover/focus states and consistent spacing.",
+        "Typography (headings, body, buttons) is consistent site-wide and readable with sufficient contrast in the light theme."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement the Home page with: (1) Hero section containing a headline, subheadline, and three CTA buttons: “Call Now”, “WhatsApp Us”, and “Enroll Now”; (2) “Why Choose Start To Succeed” section using icon cards; (3) “Courses Offered” highlights for Classes 6–12, IIT-JEE Foundation, and NEET Foundation; (4) a strong CTA banner near the bottom of the page.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Home Page",
+          "Hero section with headline, subheadline",
+          "Call-to-Action buttons: Call Now, WhatsApp Us, Enroll Now",
+          "“Why Choose Start To Succeed” (icon cards)",
+          "Courses Offered (Class 6–12, IIT-JEE Foundation, NEET Foundation)",
+          "Strong CTA banner"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The hero CTAs are visible above the fold on mobile and desktop and are accessible via keyboard navigation.",
+        "The “Why Choose” icon-card layout adapts from a single-column stack on mobile to multi-column on larger screens.",
+        "The CTA banner includes a clear message and at least one actionable button that routes/scrolls to the Contact/Enroll action."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Implement an About Us page/section containing content blocks for Mission, Vision, and Teaching Methodology with a student-centric, results-oriented emphasis and a trust-focused, academic, premium tone appropriate for students and parents.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "About Us",
+          "Mission, vision, teaching methodology",
+          "Student-centric and results-oriented approach",
+          "Tone: Trust-focused, academic, premium, parent-friendly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "About content is organized into clearly labeled subsections (Mission, Vision, Teaching Methodology) with scannable headings.",
+        "Layout remains readable and visually consistent with the Home page styling on all breakpoints."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement a Courses page/section that lists (A) Board classes (6–12) and (B) Competitive foundation (IIT-JEE & NEET), where each course/card includes a short description and a CTA that drives enrollment/contact intent (e.g., scroll to contact form or open WhatsApp).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Courses",
+          "Board classes (6–12)",
+          "Competitive foundation (IIT-JEE & NEET)",
+          "Each course with short description and CTA"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Courses are grouped into the two requested categories and are visually distinct (headings + card grid/list).",
+        "Each course item has a working CTA that triggers a clear next step (scroll to contact, open WhatsApp, or open enroll modal/section)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Implement a Contact Us page/section that displays the institute’s address and phone/WhatsApp details, provides a contact form (name, phone, optional email, message), and includes a Google Map embed for the address. Use the exact business information provided.",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact Us",
+          "Address",
+          "Phone & WhatsApp",
+          "Contact form",
+          "Google Map embed",
+          "Address: Apt, 171, opp. Adya Green, P.O. Garia Gardens, Garia, Rajpur Sonarpur, West Bengal 700084",
+          "Phone: 062895 14099",
+          "WhatsApp: 062895 14099"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The Contact section displays the exact address text and phone/WhatsApp number as provided.",
+        "The map embed renders on desktop and mobile; it is loaded in a performance-friendly way (e.g., lazy loading).",
+        "Submitting the contact form shows a success/failure state and does not cause a full page reload."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add backend support for the contact form by implementing canister methods to create/store contact inquiries (including timestamp) and allow the frontend to submit inquiries. Persist inquiries in stable storage so they survive canister upgrades.",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Contact form"
+        ]
+      },
+      "acceptanceCriteria": [
+        "A frontend form submission results in a stored inquiry record in the canister.",
+        "Inquiry records persist across canister upgrades using stable storage patterns.",
+        "Backend validates required fields (at minimum: name, phone, message) and returns clear error responses for invalid input."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a site-wide footer containing quick links (to Home, About, Courses, Contact), contact details (address + phone), and social links using the exact provided URLs for Facebook and Google My Business.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Footer Requirements:",
+          "Quick links",
+          "Contact details",
+          "Social media integration",
+          "Facebook link: https://www.facebook.com/share/188cZvXSkN/?mibextid=wwXIfr",
+          "Google My Business link: https://share.google/sypTjKuMc8v1bhgd"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Footer links navigate to the correct page/section targets.",
+        "Facebook and Google My Business links open in a new tab and use safe link attributes (e.g., rel=\"noreferrer\").",
+        "Footer remains readable and well-spaced on mobile and desktop."
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Implement functional contact integrations: (1) click-to-call phone links using the provided phone number; (2) a sticky “WhatsApp” button visible on mobile that opens a WhatsApp chat to the provided number; (3) ensure the “Call Now” and “WhatsApp Us” hero buttons use these integrations.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Click-to-call phone number",
+          "Click-to-WhatsApp button (sticky on mobile)",
+          "Call-to-Action buttons: Call Now, WhatsApp Us"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Clicking any phone link triggers a tel: link with the provided number.",
+        "The sticky WhatsApp button appears on mobile viewports and does not overlap critical UI elements (e.g., form submit button).",
+        "WhatsApp actions open the correct WhatsApp deep link/chat to the provided number."
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "text": "Add SEO and accessibility enhancements: use semantic headings (single H1 per page/primary view), descriptive meta title/description per page, Open Graph basics, accessible form labels, keyboard navigability, visible focus states, and image alt text. Ensure fast loading by minimizing heavy assets and lazy-loading non-critical content (e.g., map embed).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "SEO-optimized headings and meta tags",
+          "Fast loading and accessibility-friendly"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each page/primary route sets a unique document title and meta description aligned with “Start To Succeed” and the page’s content.",
+        "All interactive elements are reachable by keyboard and have visible focus styling.",
+        "Form fields have associated labels and errors are announced/visible.",
+        "Non-critical embeds (map) are lazy-loaded or deferred to reduce initial load cost."
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "text": "Generate and include branded static images as frontend assets: a primary institute logo and a light-themed hero background/illustration aligned with an academic, trust-focused, premium look. Store them under frontend/public/assets/generated and use them in the header/hero and as favicon/app icon where appropriate.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Build a professional, modern, light-themed website for an educational coaching institute named “Start To Succeed.”"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are present in frontend/public/assets/generated and referenced directly by the frontend (not served via the backend).",
+        "Logo is used in the site header and as a favicon/app icon where supported.",
+        "Hero graphic renders crisply on desktop and mobile and does not harm text readability (sufficient contrast)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Use only Internet Identity if authentication is ever needed (no third-party auth).",
+    "Backend must remain a single Motoko actor; do not introduce additional backend services.",
+    "Do not modify any immutable frontend paths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui."
+  ],
+  "nonGoals": [
+    "Online payments, subscriptions, or any checkout flow.",
+    "Student login portals, dashboards, attendance, or test/quiz systems.",
+    "Sending emails/SMS/WhatsApp messages via external providers (store inquiries in-canister only).",
+    "Real-time chat or WebSocket-based features."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimal, premium academic logo mark with book/laurel motif in blue and red on transparent background (sts-logo.dim_512x512.png)",
+      "Light-themed hero background illustration with subtle academic elements and ample whitespace (sts-hero-bg.dim_1600x900.png)",
+      "Simple favicon/app icon derived from the logo, high-contrast on light backgrounds (sts-favicon.dim_128x128.png)"
+    ],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

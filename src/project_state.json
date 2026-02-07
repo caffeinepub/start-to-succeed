@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Build a professional, modern, light-themed, responsive marketing website for the educational coaching institute “Start To Succeed” with Home, About, Courses, and Contact sections, strong CTAs, SEO/accessibility, and contact integrations (call/WhatsApp, map, form).",
+  "architectural_notes": [
+    "Mobile-first responsive layout; light theme with blue/red accent palette and modern card-based UI.",
+    "Include SEO-friendly semantic structure (H1/H2 hierarchy) and meta tags; prioritize performance and accessibility.",
+    "Contact integrations must support tel: click-to-call and WhatsApp deep link; WhatsApp button should be sticky on mobile.",
+    "Site includes Home, About, Courses, Contact sections/pages plus footer with external social links and map embed."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimal, premium academic logo mark with book/laurel motif in blue and red on transparent background (sts-logo.dim_512x512.png)\n- Light-themed hero background illustration with subtle academic elements and ample whitespace (sts-hero-bg.dim_1600x900.png)\n- Simple favicon/app icon derived from the logo, high-contrast on light backgrounds (sts-favicon.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-create-a-modern-light-themed-fully-responsive-mobile-first-marketing-website-for-the-coaching-institute-start-to-succeed-using-a-white-background-with-blue-red-accent-colors-clean-typography-spacious-layout-modern-cards-icons-soft-shadows-and-smooth-hover-animations-across-interactive-elements",
+      "title": "Create a modern, light-themed, fully responsive (mobile-first) marketing website for the coaching institute “Start To Succeed” using a white background with blue/red accent colors, clean typography, spacious layout, modern cards/icons, soft shadows, and smooth hover animations across interactive elements.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-home-page-with-1-hero-section-containing-a-headline-subheadline-and-three-cta-buttons-call-now-whatsapp-us-and-enroll-now-2-why-choose-start-to-succeed-section-using-icon-cards-3-courses-offered-highlights-for-classes-6-12-iit-jee-foundation-and-neet-foundation-4-a-strong-cta-banner-near-the-bottom-of-the-page",
+      "title": "Implement the Home page with: (1) Hero section containing a headline, subheadline, and three CTA buttons: “Call Now”, “WhatsApp Us”, and “Enroll Now”; (2) “Why Choose Start To Succeed” section using icon cards; (3) “Courses Offered” highlights for Classes 6–12, IIT-JEE Foundation, and NEET Foundation; (4) a strong CTA banner near the bottom of the page.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-about-us-page-section-containing-content-blocks-for-mission-vision-and-teaching-methodology-with-a-student-centric-results-oriented-emphasis-and-a-trust-focused-academic-premium-tone-appropriate-for-students-and-parents",
+      "title": "Implement an About Us page/section containing content blocks for Mission, Vision, and Teaching Methodology with a student-centric, results-oriented emphasis and a trust-focused, academic, premium tone appropriate for students and parents.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-courses-page-section-that-lists-a-board-classes-6-12-and-b-competitive-foundation-iit-jee-neet-where-each-course-card-includes-a-short-description-and-a-cta-that-drives-enrollment-contact-intent-e-g-scroll-to-contact-form-or-open-whatsapp",
+      "title": "Implement a Courses page/section that lists (A) Board classes (6–12) and (B) Competitive foundation (IIT-JEE & NEET), where each course/card includes a short description and a CTA that drives enrollment/contact intent (e.g., scroll to contact form or open WhatsApp).",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-contact-us-page-section-that-displays-the-institute-s-address-and-phone-whatsapp-details-provides-a-contact-form-name-phone-optional-email-message-and-includes-a-google-map-embed-for-the-address-use-the-exact-business-information-provided",
+      "title": "Implement a Contact Us page/section that displays the institute’s address and phone/WhatsApp details, provides a contact form (name, phone, optional email, message), and includes a Google Map embed for the address. Use the exact business information provided.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-site-wide-footer-containing-quick-links-to-home-about-courses-contact-contact-details-address-phone-and-social-links-using-the-exact-provided-urls-for-facebook-and-google-my-business",
+      "title": "Implement a site-wide footer containing quick links (to Home, About, Courses, Contact), contact details (address + phone), and social links using the exact provided URLs for Facebook and Google My Business.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-functional-contact-integrations-1-click-to-call-phone-links-using-the-provided-phone-number-2-a-sticky-whatsapp-button-visible-on-mobile-that-opens-a-whatsapp-chat-to-the-provided-number-3-ensure-the-call-now-and-whatsapp-us-hero-buttons-use-these-integrations",
+      "title": "Implement functional contact integrations: (1) click-to-call phone links using the provided phone number; (2) a sticky “WhatsApp” button visible on mobile that opens a WhatsApp chat to the provided number; (3) ensure the “Call Now” and “WhatsApp Us” hero buttons use these integrations.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seo-and-accessibility-enhancements-use-semantic-headings-single-h1-per-page-primary-view-descriptive-meta-title-description-per-page-open-graph-basics-accessible-form-labels-keyboard-navigability-visible-focus-states-and-image-alt-text-ensure-fast-loading-by-minimizing-heavy-assets-and-lazy-loading-non-critical-content-e-g-map-embed",
+      "title": "Add SEO and accessibility enhancements: use semantic headings (single H1 per page/primary view), descriptive meta title/description per page, Open Graph basics, accessible form labels, keyboard navigability, visible focus states, and image alt text. Ensure fast loading by minimizing heavy assets and lazy-loading non-critical content (e.g., map embed).",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-generate-and-include-branded-static-images-as-frontend-assets-a-primary-institute-logo-and-a-light-themed-hero-background-illustration-aligned-with-an-academic-trust-focused-premium-look-store-them-under-frontend-public-assets-generated-and-use-them-in-the-header-hero-and-as-favicon-app-icon-where-appropriate",
+      "title": "Generate and include branded static images as frontend assets: a primary institute logo and a light-themed hero background/illustration aligned with an academic, trust-focused, premium look. Store them under frontend/public/assets/generated and use them in the header/hero and as favicon/app icon where appropriate.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create light-themed responsive website UI (white background, blue/red accents, clean typography, modern cards/icons, soft shadows, hover animations) for Start To Succeed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement Home page sections: Hero (headline/subheadline) with CTAs (Call Now, WhatsApp Us, Enroll Now), Why Choose icon cards, Courses Offered highlights, and strong CTA banner",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Implement About Us section with mission, vision, and teaching methodology content (student-centric, results-oriented)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Implement Courses section: Board classes (6–12) and Competitive Foundation (IIT-JEE & NEET) with short descriptions and CTAs",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Implement Contact Us section: address, phone/WhatsApp, contact form, and Google Map embed",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add footer with quick links, contact details, and social media integration (Facebook + Google My Business links)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add functional contact integrations: click-to-call phone number and sticky mobile click-to-WhatsApp button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add SEO + performance + accessibility: optimized headings/meta tags, fast loading, accessibility-friendly structure",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Add backend support for the contact form by implementing canister methods to create/store contact inquiries (including timestamp) and allow the frontend to submit inquiries. Persist inquiries in stable storage so they survive canister upgrades.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Start To Succeed",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

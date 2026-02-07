@@ -1,0 +1,190 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-create-a-modern-light-themed-fully-responsive-mobile-first-marketing-website-for-the-coaching-institute-start-to-succeed-using-a-white-background-with-blue-red-accent-colors-clean-typography-spacious-layout-modern-cards-icons-soft-shadows-and-smooth-hover-animations-across-interactive-elements",
+      "featureTitle": "Create a modern, light-themed, fully responsive (mobile-first) marketing website for the coaching institute “Start To Succeed” using a white background with blue/red accent colors, clean typography, spacious layout, modern cards/icons, soft shadows, and smooth hover animations across interactive elements.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-1"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-the-home-page-with-1-hero-section-containing-a-headline-subheadline-and-three-cta-buttons-call-now-whatsapp-us-and-enroll-now-2-why-choose-start-to-succeed-section-using-icon-cards-3-courses-offered-highlights-for-classes-6-12-iit-jee-foundation-and-neet-foundation-4-a-strong-cta-banner-near-the-bottom-of-the-page",
+      "featureTitle": "Implement the Home page with: (1) Hero section containing a headline, subheadline, and three CTA buttons: “Call Now”, “WhatsApp Us”, and “Enroll Now”; (2) “Why Choose Start To Succeed” section using icon cards; (3) “Courses Offered” highlights for Classes 6–12, IIT-JEE Foundation, and NEET Foundation; (4) a strong CTA banner near the bottom of the page.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/lib/scroll.ts",
+        "frontend/src/sections/HomeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-about-us-page-section-containing-content-blocks-for-mission-vision-and-teaching-methodology-with-a-student-centric-results-oriented-emphasis-and-a-trust-focused-academic-premium-tone-appropriate-for-students-and-parents",
+      "featureTitle": "Implement an About Us page/section containing content blocks for Mission, Vision, and Teaching Methodology with a student-centric, results-oriented emphasis and a trust-focused, academic, premium tone appropriate for students and parents.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/sections/AboutSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-courses-page-section-that-lists-a-board-classes-6-12-and-b-competitive-foundation-iit-jee-neet-where-each-course-card-includes-a-short-description-and-a-cta-that-drives-enrollment-contact-intent-e-g-scroll-to-contact-form-or-open-whatsapp",
+      "featureTitle": "Implement a Courses page/section that lists (A) Board classes (6–12) and (B) Competitive foundation (IIT-JEE & NEET), where each course/card includes a short description and a CTA that drives enrollment/contact intent (e.g., scroll to contact form or open WhatsApp).",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/lib/contactLinks.ts",
+        "frontend/src/sections/CoursesSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-contact-us-page-section-that-displays-the-institute-s-address-and-phone-whatsapp-details-provides-a-contact-form-name-phone-optional-email-message-and-includes-a-google-map-embed-for-the-address-use-the-exact-business-information-provided",
+      "featureTitle": "Implement a Contact Us page/section that displays the institute’s address and phone/WhatsApp details, provides a contact form (name, phone, optional email, message), and includes a Google Map embed for the address. Use the exact business information provided.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactForm.tsx",
+        "frontend/src/components/LazyGoogleMapEmbed.tsx",
+        "frontend/src/hooks/useSubmitContactInquiry.ts",
+        "frontend/src/sections/ContactSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-5"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-site-wide-footer-containing-quick-links-to-home-about-courses-contact-contact-details-address-phone-and-social-links-using-the-exact-provided-urls-for-facebook-and-google-my-business",
+      "featureTitle": "Implement a site-wide footer containing quick links (to Home, About, Courses, Contact), contact details (address + phone), and social links using the exact provided URLs for Facebook and Google My Business.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteFooter.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-functional-contact-integrations-1-click-to-call-phone-links-using-the-provided-phone-number-2-a-sticky-whatsapp-button-visible-on-mobile-that-opens-a-whatsapp-chat-to-the-provided-number-3-ensure-the-call-now-and-whatsapp-us-hero-buttons-use-these-integrations",
+      "featureTitle": "Implement functional contact integrations: (1) click-to-call phone links using the provided phone number; (2) a sticky “WhatsApp” button visible on mobile that opens a WhatsApp chat to the provided number; (3) ensure the “Call Now” and “WhatsApp Us” hero buttons use these integrations.",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/StickyWhatsAppButton.tsx",
+        "frontend/src/sections/ContactSection.tsx",
+        "frontend/src/sections/HomeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-seo-and-accessibility-enhancements-use-semantic-headings-single-h1-per-page-primary-view-descriptive-meta-title-description-per-page-open-graph-basics-accessible-form-labels-keyboard-navigability-visible-focus-states-and-image-alt-text-ensure-fast-loading-by-minimizing-heavy-assets-and-lazy-loading-non-critical-content-e-g-map-embed",
+      "featureTitle": "Add SEO and accessibility enhancements: use semantic headings (single H1 per page/primary view), descriptive meta title/description per page, Open Graph basics, accessible form labels, keyboard navigability, visible focus states, and image alt text. Ensure fast loading by minimizing heavy assets and lazy-loading non-critical content (e.g., map embed).",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/ContactForm.tsx",
+        "frontend/src/components/LazyGoogleMapEmbed.tsx",
+        "frontend/src/lib/seo.ts",
+        "frontend/src/sections/HomeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-9"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-generate-and-include-branded-static-images-as-frontend-assets-a-primary-institute-logo-and-a-light-themed-hero-background-illustration-aligned-with-an-academic-trust-focused-premium-look-store-them-under-frontend-public-assets-generated-and-use-them-in-the-header-hero-and-as-favicon-app-icon-where-appropriate",
+      "featureTitle": "Generate and include branded static images as frontend assets: a primary institute logo and a light-themed hero background/illustration aligned with an academic, trust-focused, premium look. Store them under frontend/public/assets/generated and use them in the header/hero and as favicon/app icon where appropriate.",
+      "files": [
+        "frontend/index.html",
+        "frontend/src/App.tsx",
+        "frontend/src/components/SiteHeader.tsx",
+        "frontend/src/sections/HomeSection.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-10"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

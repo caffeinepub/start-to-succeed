@@ -1,0 +1,20 @@
+{
+  "frontend/src/App.tsx": "Main application component that composes the site layout with header, footer, all sections (Home, About, Courses, Contact), sticky WhatsApp button, and toast notifications; sets default SEO metadata on mount.",
+  "frontend/src/components/SiteHeader.tsx": "Responsive site header with logo, navigation menu (desktop and mobile), and CTA button; handles smooth scrolling to sections and mobile menu toggle.",
+  "frontend/src/components/SiteFooter.tsx": "Site-wide footer displaying brand info, quick navigation links, contact details, and social media links (Facebook, Google My Business) with proper external link attributes.",
+  "frontend/src/components/StickyWhatsAppButton.tsx": "Fixed-position WhatsApp button visible on mobile viewports that opens WhatsApp chat with the institute's number.",
+  "frontend/src/components/ContactForm.tsx": "Accessible contact form with validation for name, phone, email (optional), and message fields; handles submission with loading states and toast notifications.",
+  "frontend/src/components/LazyGoogleMapEmbed.tsx": "Performance-optimized Google Maps embed component that defers iframe loading until user interaction via a \"Load Map\" button.",
+  "frontend/src/sections/HomeSection.tsx": "Home page section with hero banner, three CTA buttons (Call, WhatsApp, Enroll), \"Why Choose\" icon cards, courses highlights, and bottom CTA banner.",
+  "frontend/src/sections/AboutSection.tsx": "About Us section displaying mission, vision, and teaching methodology in card layout with additional student-centric content block.",
+  "frontend/src/sections/CoursesSection.tsx": "Courses section showcasing board classes (6-12) and competitive foundation programs (IIT-JEE, NEET) with detailed descriptions and enrollment CTAs.",
+  "frontend/src/sections/ContactSection.tsx": "Contact section with address, phone/WhatsApp details, office hours, contact form, and lazy-loaded map embed in a two-column responsive layout.",
+  "frontend/src/hooks/useQueries.ts": "React Query hook for fetching contact information from the backend canister.",
+  "frontend/src/hooks/useSubmitContactInquiry.ts": "Custom hook that handles contact form submission to the backend with loading state management.",
+  "frontend/src/lib/scroll.ts": "Utility function for smooth scrolling to page sections with header offset compensation.",
+  "frontend/src/lib/contactLinks.ts": "Helper functions to generate tel: and WhatsApp deep links using the institute's phone number.",
+  "frontend/src/lib/seo.ts": "SEO utility to dynamically update document title, meta description, and Open Graph tags.",
+  "frontend/src/index.css": "Global styles with OKLCH color system customized for light theme with blue primary (240° hue) and red accent colors; includes Tailwind base, components, and utilities.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with custom color tokens, border radius, shadows, and animations for the educational institute design system.",
+  "frontend/index.html": "HTML entry point with SEO meta tags, Open Graph properties, favicon links, and proper semantic structure."
+}

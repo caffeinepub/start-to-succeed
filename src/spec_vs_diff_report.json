@@ -1,0 +1,79 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-07T04:37:41.136Z",
+  "summary": "Diff adds a single-page marketing site composed of Home/About/Courses/Contact sections with header/footer, sticky WhatsApp button, contact form submission to a Motoko backend, and basic runtime SEO/meta updates. Several core backend/data requirements are incomplete or incorrect (stable persistence, validation, exact business info), and the backend includes extra inquiry-retrieval endpoints not requested.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Use the exact provided business information (address and phone/WhatsApp details) in the Contact section.",
+      "reason": "Frontend shows a Kolkata address/phone, but the backend `getContactInfo()` returns a different phone number and a Berlin address, so the system does not consistently use the exact provided business information.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/sections/ContactSection.tsx",
+        "frontend/src/components/SiteFooter.tsx"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Persist contact inquiries in stable storage so they survive canister upgrades.",
+      "reason": "Backend stores inquiries in an in-memory `List` with no stable variables or pre/post-upgrade hooks shown, so inquiries would not survive upgrades.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "requirement": "Backend validates required fields (at minimum: name, phone, message) and returns clear error responses for invalid input.",
+      "reason": "`submitContactForm` accepts values and always appends a record; no validation checks or explicit error returns are implemented.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Backend endpoints to list and fetch stored inquiries (`getSortedContactInquiries` and `getContactInquiryByTimestamp`).",
+      "reason": "BuildRequest only asks for canister methods to create/store inquiries and allow frontend submission; it does not request admin/query endpoints for retrieving inquiries.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Backend `getContactInfo()` method returning phone/address/chatUrl.",
+      "reason": "BuildRequest specifies the Contact section should display exact business info, but does not request a backend API for serving that info.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/ContactForm.tsx",
+    "frontend/src/components/LazyGoogleMapEmbed.tsx",
+    "frontend/src/components/SiteFooter.tsx",
+    "frontend/src/components/SiteHeader.tsx",
+    "frontend/src/components/StickyWhatsAppButton.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useSubmitContactInquiry.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/contactLinks.ts",
+    "frontend/src/lib/scroll.ts",
+    "frontend/src/lib/seo.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/sections/AboutSection.tsx",
+    "frontend/src/sections/ContactSection.tsx",
+    "frontend/src/sections/CoursesSection.tsx",
+    "frontend/src/sections/HomeSection.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

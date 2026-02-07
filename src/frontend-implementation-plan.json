@@ -1,0 +1,285 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Start To Succeed marketing website (Home/About/Courses/Contact) with SEO + click-to-call/WhatsApp",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Implement a modern, light-themed, mobile-first responsive UI with white background, blue/red accents, clean typography, spacious layout, cards/icons, shadows, and hover animations site-wide.",
+      "acceptanceCriteria": [
+        "All pages/sections render correctly from 320px mobile up through desktop widths without horizontal scrolling.",
+        "Primary and secondary CTAs have visible hover/focus states and consistent spacing.",
+        "Typography (headings, body, buttons) is consistent site-wide and readable with sufficient contrast in the light theme."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "create",
+          "description": "Create global Tailwind/CSS theme tokens for light theme (white background, blue/red accents), typography scale, consistent spacing, soft shadows, and visible focus rings; ensure hover/transition utilities feel consistent across interactive elements."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend theme tokens (colors, shadows, radii) to match the Start To Succeed light theme and enable consistent card/CTA styling across pages."
+        },
+        {
+          "path": "frontend/src/components/SiteLayout.tsx",
+          "operation": "create",
+          "description": "Create a shared layout wrapper (container widths, section spacing, responsive padding) to keep all sections visually consistent; use shadcn-ui primitives (e.g., Card, Button) for consistent styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "create",
+          "description": "Create the main app composition that applies the SiteLayout and renders the required sections (Home/About/Courses/Contact) in a cohesive, responsive structure; ensure interactive elements have smooth hover animations and visible focus states."
+        }
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "summary": "Build the Home view with hero (headline/subheadline + Call Now/WhatsApp Us/Enroll Now CTAs), Why Choose icon cards, Courses highlights, and a strong CTA banner linking to enrollment/contact intent.",
+      "acceptanceCriteria": [
+        "The hero CTAs are visible above the fold on mobile and desktop and are accessible via keyboard navigation.",
+        "The “Why Choose” icon-card layout adapts from a single-column stack on mobile to multi-column on larger screens.",
+        "The CTA banner includes a clear message and at least one actionable button that routes/scrolls to the Contact/Enroll action."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/HomeSection.tsx",
+          "operation": "create",
+          "description": "Implement the Home section: hero headline/subheadline with three CTA buttons, “Why Choose” icon-card grid, “Courses Offered” highlights, and a bottom CTA banner; use shadcn-ui components (Button/Card) for consistent CTA and card UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/scroll.ts",
+          "operation": "create",
+          "description": "Add small helper(s) to smoothly scroll to the Contact section when users click “Enroll Now”/CTA banner buttons (and to support internal section navigation)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire HomeSection into the main layout (including section id for in-page navigation) and ensure hero background image placement does not reduce text contrast/readability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create an About Us view with Mission, Vision, and Teaching Methodology content blocks in a trust-focused, academic, premium tone.",
+      "acceptanceCriteria": [
+        "About content is organized into clearly labeled subsections (Mission, Vision, Teaching Methodology) with scannable headings.",
+        "Layout remains readable and visually consistent with the Home page styling on all breakpoints."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/AboutSection.tsx",
+          "operation": "create",
+          "description": "Implement About section with three clearly labeled content blocks (Mission, Vision, Teaching Methodology) using consistent headings, spacing, and card/layout styling; use shadcn-ui Card for content blocks where appropriate. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire AboutSection into the main layout and ensure a single logical H1 exists for the primary view while About uses appropriate H2/H3 hierarchy."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Create a Courses view that groups Board classes (6–12) and Competitive foundation (IIT-JEE & NEET), each with description and enrollment/contact CTA.",
+      "acceptanceCriteria": [
+        "Courses are grouped into the two requested categories and are visually distinct (headings + card grid/list).",
+        "Each course item has a working CTA that triggers a clear next step (scroll to contact, open WhatsApp, or open enroll modal/section)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/CoursesSection.tsx",
+          "operation": "create",
+          "description": "Implement Courses section with two grouped categories (Board classes 6–12; Competitive foundation IIT-JEE & NEET) using a responsive card grid/list; each card includes a short description and CTA(s) that scroll to Contact and/or open WhatsApp; use shadcn-ui Card/Button for consistent UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/lib/contactLinks.ts",
+          "operation": "create",
+          "description": "Add utilities to generate the tel: link and WhatsApp deep link using the provided phone/WhatsApp number; reuse across hero, courses CTAs, and footer."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire CoursesSection into the main layout and ensure CTAs correctly trigger the intended next step (scroll to Contact or open WhatsApp)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "summary": "Create a Contact Us view showing exact business info, a client-side contact form with success/failure UI (no full reload), and a lazy-loaded Google Map embed.",
+      "acceptanceCriteria": [
+        "The Contact section displays the exact address text and phone/WhatsApp number as provided.",
+        "The map embed renders on desktop and mobile; it is loaded in a performance-friendly way (e.g., lazy loading).",
+        "Submitting the contact form shows a success/failure state and does not cause a full page reload."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/sections/ContactSection.tsx",
+          "operation": "create",
+          "description": "Implement Contact section displaying the exact address and phone/WhatsApp details, plus a contact form (name, phone, optional email, message) and a map embed area that is lazy-loaded; use shadcn-ui Input/Textarea/Label/Button for accessible form controls. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/components/LazyGoogleMapEmbed.tsx",
+          "operation": "create",
+          "description": "Create a map embed component that defers loading the Google Maps iframe until needed (e.g., on interaction or when scrolled into view) and uses performance-friendly settings (including iframe lazy loading)."
+        },
+        {
+          "path": "frontend/src/components/ContactForm.tsx",
+          "operation": "create",
+          "description": "Create a reusable contact form component with validation (required: name, phone, message), inline/announced errors, and async submit state (loading/success/failure) without page reload; use shadcn-ui form primitives for consistent accessible UI. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/hooks/useSubmitContactInquiry.ts",
+          "operation": "create",
+          "description": "Create a frontend hook that uses useActor() to call the backend capability submitContactForm(...) and returns a simple submit API plus status (loading/success/error) for the ContactForm."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire ContactSection into the main layout with a stable section id to support scroll-to-contact from CTAs and footer links."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Add a site-wide footer with quick links to sections, contact details (address + phone), and social links (Facebook + Google My Business) using provided URLs.",
+      "acceptanceCriteria": [
+        "Footer links navigate to the correct page/section targets.",
+        "Facebook and Google My Business links open in a new tab and use safe link attributes (e.g., rel=\"noreferrer\").",
+        "Footer remains readable and well-spaced on mobile and desktop."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/SiteFooter.tsx",
+          "operation": "create",
+          "description": "Implement a responsive footer with quick links (Home/About/Courses/Contact), exact contact details (address + phone), and social links using the provided Facebook and Google My Business URLs (open in new tab with safe rel attributes); use shadcn-ui Button/link styling as needed. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SiteFooter site-wide so it appears on all views/sections and ensure footer anchors scroll to the correct section ids."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Implement click-to-call and WhatsApp integrations, including a mobile sticky WhatsApp button, and ensure hero CTAs use them.",
+      "acceptanceCriteria": [
+        "Clicking any phone link triggers a tel: link with the provided number.",
+        "The sticky WhatsApp button appears on mobile viewports and does not overlap critical UI elements (e.g., form submit button).",
+        "WhatsApp actions open the correct WhatsApp deep link/chat to the provided number."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/StickyWhatsAppButton.tsx",
+          "operation": "create",
+          "description": "Create a sticky WhatsApp button that is visible on mobile viewports and opens the WhatsApp chat deep link to the provided number; ensure it avoids overlapping key UI (especially Contact form submit) and remains keyboard accessible; use shadcn-ui Button for consistent styling. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/sections/HomeSection.tsx",
+          "operation": "modify",
+          "description": "Ensure the hero “Call Now” and “WhatsApp Us” buttons use the shared contactLinks helpers so they open the correct tel: and WhatsApp deep links; keep them keyboard accessible and above-the-fold on mobile."
+        },
+        {
+          "path": "frontend/src/sections/ContactSection.tsx",
+          "operation": "modify",
+          "description": "Wire contact detail links (phone/WhatsApp) to use the shared contactLinks helpers and ensure tap targets are appropriately sized on mobile."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Mount StickyWhatsAppButton globally and confirm spacing/z-index doesn’t clash with footer or Contact form actions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-9",
+      "summary": "Add SEO and accessibility improvements: semantic headings (single H1), per-view meta title/description + Open Graph basics, accessible labels and focus states, keyboard navigation, alt text, and lazy-loading of non-critical embeds.",
+      "acceptanceCriteria": [
+        "Each page/primary route sets a unique document title and meta description aligned with “Start To Succeed” and the page’s content.",
+        "All interactive elements are reachable by keyboard and have visible focus styling.",
+        "Form fields have associated labels and errors are announced/visible.",
+        "Non-critical embeds (map) are lazy-loaded or deferred to reduce initial load cost."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Add baseline SEO/meta tags (meta description placeholder, Open Graph basics) and ensure the document includes required icon links; keep defaults aligned to “Start To Succeed” and the marketing site purpose."
+        },
+        {
+          "path": "frontend/src/lib/seo.ts",
+          "operation": "create",
+          "description": "Add a small SEO utility to set document title, meta description, and Open Graph fields from the active primary view/section (Home/About/Courses/Contact)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SEO updates so the active primary view/section sets a unique title/description (e.g., based on current hash/scroll target); ensure semantic heading hierarchy with a single H1 for the primary view."
+        },
+        {
+          "path": "frontend/src/components/ContactForm.tsx",
+          "operation": "modify",
+          "description": "Ensure accessible labels are associated with inputs, validation errors are visible and announced (e.g., aria-live for summary/status), and all fields/buttons are keyboard navigable."
+        },
+        {
+          "path": "frontend/src/sections/HomeSection.tsx",
+          "operation": "modify",
+          "description": "Ensure any decorative/branding imagery includes appropriate alt handling (alt text for meaningful images; empty alt for purely decorative) and interactive elements have clear focus/hover styles."
+        },
+        {
+          "path": "frontend/src/components/LazyGoogleMapEmbed.tsx",
+          "operation": "modify",
+          "description": "Ensure the map embed remains deferred/lazy-loaded to reduce initial load cost and is usable on both mobile and desktop."
+        }
+      ]
+    },
+    {
+      "id": "REQ-10",
+      "summary": "Add branded static images (logo, hero background, favicon) under frontend/public/assets/generated and wire them into header/hero and favicon/app icon usage.",
+      "acceptanceCriteria": [
+        "Generated images are present in frontend/public/assets/generated and referenced directly by the frontend (not served via the backend).",
+        "Logo is used in the site header and as a favicon/app icon where supported.",
+        "Hero graphic renders crisply on desktop and mobile and does not harm text readability (sufficient contrast)."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/public/assets/generated/sts-logo.dim_512x512.png",
+          "operation": "create",
+          "description": "Add the generated logo asset at frontend/public/assets/generated/sts-logo.dim_512x512.png (transparent background)."
+        },
+        {
+          "path": "frontend/public/assets/generated/sts-hero-bg.dim_1600x900.png",
+          "operation": "create",
+          "description": "Add the generated hero background illustration at frontend/public/assets/generated/sts-hero-bg.dim_1600x900.png (light theme, ample whitespace)."
+        },
+        {
+          "path": "frontend/public/assets/generated/sts-favicon.dim_128x128.png",
+          "operation": "create",
+          "description": "Add the generated favicon/app icon at frontend/public/assets/generated/sts-favicon.dim_128x128.png (high contrast on light backgrounds)."
+        },
+        {
+          "path": "frontend/src/components/SiteHeader.tsx",
+          "operation": "create",
+          "description": "Create a site header that displays the logo (use frontend/public/assets/generated/sts-logo.dim_512x512.png), includes navigation links to the required sections, and provides consistent CTA styling; use shadcn-ui Button for nav/CTAs where appropriate. Verify the component's usage instructions before implementing."
+        },
+        {
+          "path": "frontend/src/sections/HomeSection.tsx",
+          "operation": "modify",
+          "description": "Use frontend/public/assets/generated/sts-hero-bg.dim_1600x900.png in the hero background/illustration area while preserving text contrast and responsiveness."
+        },
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Wire favicon/app icon links to frontend/public/assets/generated/sts-favicon.dim_128x128.png (and include any additional icon link tags as appropriate for broad support)."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wire SiteHeader into the global layout so the logo is visible site-wide and navigation works consistently across breakpoints."
+        }
+      ]
+    }
+  ]
+}
